@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\": {}
+    "C:\\Users\\HOME-PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexl_2ewksan\\Desktop\\C# Tests\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\HOME-PC\\Source\\Repos\\40017465\\ALAAK\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
       "projectName": "EU_Voting_Calculator",
-      "projectPath": "C:\\Users\\alexl_2ewksan\\Desktop\\C# Tests\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
-      "packagesPath": "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexl_2ewksan\\Desktop\\C# Tests\\EU_Voting_Calculator\\obj\\",
+      "projectPath": "C:\\Users\\HOME-PC\\Source\\Repos\\40017465\\ALAAK\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
+      "packagesPath": "C:\\Users\\HOME-PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HOME-PC\\Source\\Repos\\40017465\\ALAAK\\EU_Voting_Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alexl_2ewksan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HOME-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
