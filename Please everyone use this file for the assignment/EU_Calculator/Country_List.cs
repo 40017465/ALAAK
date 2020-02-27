@@ -59,7 +59,7 @@ namespace EU_Calculator
                 Console.WriteLine(country.Name);
                 vote.Votes(Percentage(country.Population));
             }
-            vote.results(participatingRule, vote_ruyle);
+            vote.results(participatingRule, vote_rule);
             return GetCountries.ToString();
         }
 

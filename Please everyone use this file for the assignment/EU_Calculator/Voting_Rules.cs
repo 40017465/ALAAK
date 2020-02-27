@@ -6,12 +6,8 @@ namespace EU_Calculator
 {
     class Voting_Rules
     {
-        public static double Rules()
+        public static double Rules(out double Members_State, out double Population)
         {
-
-            double Population = 0;
-            double Members_State = 0;
-            List<double> MemPop = new List<double>();
 
             while (true)
             {
@@ -46,8 +42,7 @@ namespace EU_Calculator
                                 Members_State = 27 * 0.1;
                                 Population = 0;
                             }
-                            MemPop.Add(Members_State);
-                            MemPop.Add(Population);
+
 
 
 
@@ -56,9 +51,7 @@ namespace EU_Calculator
                         {
                             Console.WriteLine("Please enter a number less than 4");
                         }
-                        Console.WriteLine(MemPop);
 
-                        return Population;
                     }
 
                 }

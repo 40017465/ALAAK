@@ -6,7 +6,7 @@ namespace EU_Calculator
     {
         static void Main(string[] args)
         {
-            Voting_Rules.Rules();
+            Voting_Rules.Rules(out double Members_State, out double Population);
         }
     }
 }
