@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexl_2ewksan\\Desktop\\OOP Assignment 1\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj": {}
+    "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexl_2ewksan\\Desktop\\OOP Assignment 1\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj": {
+    "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexl_2ewksan\\Desktop\\OOP Assignment 1\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
         "projectName": "EU_Calculator",
-        "projectPath": "C:\\Users\\alexl_2ewksan\\Desktop\\OOP Assignment 1\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+        "projectPath": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
         "packagesPath": "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexl_2ewksan\\Desktop\\OOP Assignment 1\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
+        "outputPath": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexl_2ewksan\\AppData\\Roaming\\NuGet\\NuGet.Config",

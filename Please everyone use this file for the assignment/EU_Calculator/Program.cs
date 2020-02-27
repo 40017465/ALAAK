@@ -6,7 +6,7 @@ namespace EU_Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Voting_Rules.Rules();
         }
     }
 }
