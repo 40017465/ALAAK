@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\HOME-PC\\.nuget\\packages\\": {}
+    "C:\\Users\\40017235\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HOME-PC\\Source\\Repos\\40017465\\ALAAK\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
       "projectName": "EU_Voting_Calculator",
-      "projectPath": "C:\\Users\\HOME-PC\\Source\\Repos\\40017465\\ALAAK\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
-      "packagesPath": "C:\\Users\\HOME-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HOME-PC\\Source\\Repos\\40017465\\ALAAK\\EU_Voting_Calculator\\obj\\",
+      "projectPath": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\EU_Voting_Calculator\\EU_Voting_Calculator.csproj",
+      "packagesPath": "C:\\Users\\40017235\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\EU_Voting_Calculator\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HOME-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\40017235\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -44,21 +48,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
