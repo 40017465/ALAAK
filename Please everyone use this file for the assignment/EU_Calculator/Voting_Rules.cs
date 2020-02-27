@@ -4,8 +4,10 @@ using System.Text;
 
 namespace EU_Calculator
 {
+    //This Class is used for deciding which rules you would like to follow and whether you would like to include the Euro Zone.
     class Voting_Rules
     {
+        //This is the function which lets you set the rules.
         public static double Rules(out double Members_State, out double Population)
         {
 
@@ -23,7 +25,7 @@ namespace EU_Calculator
                         {
                             if (Answer == 1)
                             {
-                                Members_State = 55.0 ;
+                                Members_State = 55.0;
                                 Population = 65.0;
                             }
                             else if (Answer == 2)
@@ -63,20 +65,24 @@ namespace EU_Calculator
             }
         }
 
-    }
-    public static int EuroZone()
-    {
-        while (true)
+
+
+
+        //This is the function to let you decide whether or not to include the Euro Zone.
+        public static int EuroZone()
         {
-               try
-               {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Would you like to incluce non Euro Zone? 1:Yes 2:No");
+                    int Answer = int.Parse(Console.ReadLine());
                     while (Answer <= 2)
                     {
                         try
                         {
-                            Console.WriteLine("Would you like to incluce non Euro Zone? 1:Yes 2:No");
-                            int Answer = int.Parse(Console.ReadLine());
-                            if (Asnwer == 1)
+
+                            if (Answer == 1)
                             {
                                 Country.GetCountry();
                             }
@@ -86,27 +92,26 @@ namespace EU_Calculator
                                 Country.RemoveCountry();
                             }
                         }
-                            catch(Exception)
-                            {
-                                Console.WriteLine("Please don't enter more than 2");
-                            }
-                        
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Please don't enter more than 2");
+                        }
+
                     }
 
-               }
-            catch (Exception)
-               {
+                }
+                catch (Exception)
+                {
                     Console.WriteLine("Please only enter 1 or 2");
-               }
+                }
 
-            
+
+            }
+
+
+
         }
-         
-
-                       
     }
-
-            
 }
 
 
