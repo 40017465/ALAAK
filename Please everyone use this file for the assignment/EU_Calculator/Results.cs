@@ -6,6 +6,7 @@ namespace EU_Calculator
 {
     class Results
     {
+        //Each of the following stores the data from where its used and is updated when its used i.e from Votes. Plus results later on will use it. 
         public int Yes { get; set; }
         public int No { get; set; }
         public int Abstain { get; set; }
@@ -15,7 +16,7 @@ namespace EU_Calculator
         public double NoPercentage { get; set; }
         public double AbstainPercentage { get; set; }
 
-        //asks the users input holds on that info for later in the results function aswell as the percentages
+        //After the country is shown the user is then asked for an input and that input is stored aswell as the percentage which will be used later in results.  
         public void Votes(double percentage)
         {
             Console.WriteLine("Vote" + "\n" + "1. Yes" + "\n" + "2. No" + "\n" + "3. Abstain");
@@ -26,27 +27,26 @@ namespace EU_Calculator
                 string input = Console.ReadLine();
                 if (!string.IsNullOrEmpty(input))
                 {
-                    int test = Int32.Parse(input);
+                    int input_number = Int32.Parse(input);
 
-                    if (test >= 1 && test <= 3)
+                    if (input_number >= 1 && input_number <= 3)
                     {
-                        if (test == 1)
+                        if (input_number == 1)
                         {
-                            TotalPercentage += percentage;
-                            Yes++;
-                            flag = true;
+                            TotalPercentage += percentage;     //adds the current percentage to over all TotalPercentage. 
+                            Yes++;                             //adds a +1 to the Yes counter.
+                            flag = true;                       //breaks out of the loop.
                         }
-                        else if (test == 2)
+                        else if (input_number == 2)
                         {
-                            NoPercentage += percentage;
-
-                            No++;
+                            NoPercentage += percentage;         //adds the current percentage of NoPercentage to over all percentage of NoPercentage. 
+                            No++;                               //adds a +1 to the No counter.
                             flag = true;
                         }
                         else
                         {
-                            AbstainPercentage += percentage;
-                            Abstain++;
+                            AbstainPercentage += percentage;    //adds the current percentage of AbstainPercentage to over all percentage of AbstainPercentage.
+                            Abstain++;                          //adds a +1 to the Abstain counter.
                             flag = true;
                         }
                     }
@@ -63,26 +63,13 @@ namespace EU_Calculator
             while (!flag);
         }
 
-        //uses the rules which it got passed with voting info shows the final result
-        public void results(int participatingRule, int vote_rule)
+        //Using the rules which it got passed to plus the above data, it will test to see if its Approved or Rejected.
+        public void results(double Members_State, double Population)
         {
-            /* place holder
-             * All Countries
-             * Qualified Majority             = min of 15 vote yes or 65%
-             * Reinforced Qualified Majority  = min of 20 vote yes or 65%
-             * Simple Majority                = min of 14 vote yes or 0%
-             * Unanimity                      = min of 27 vote yes or 0%
-             * 
-             * Eurozone only 
-             * Qualified Majority             = min of 11 vote yes or 65%
-             * Reinforced Qualified Majority  = min of 14 vote yes or 65%
-             * Simple Majority                = min of 10 vote yes or 0%
-             * Unanimity                      = min of 19 vote yes or 0%
-            */
-
+            
             Console.WriteLine();
-            Console.WriteLine("The Votes");
-            Console.Write("{0,2}" + " Voted for" + " Yes \t", Yes);
+            Console.WriteLine("The Votes");                                         //This parts prints how many votes for each yes ,no or abstain
+            Console.Write("{0,2}" + " Voted for" + " Yes \t", Yes);                 //and prints the percentage of each aswell.
             Console.WriteLine("{0:f2}%" + " voted Yes", TotalPercentage);
 
             Console.Write("{0,2}" + " Voted for" + " No \t", No);
@@ -93,105 +80,10 @@ namespace EU_Calculator
 
             Console.WriteLine();
 
-            if (participatingRule == 1)
-            {
-                double Qualified_Majority_percent = 65.0;
-                double Reinforced_Qualified_Majority_percent = 65.0;
-                double Simple_Majority_percent = 0.0;
-                double Unanimity_percent = 0.0;
-
-                if (vote_rule == 1)
-                {
-                    final_result_percent = Qualified_Majority_percent;
-                }
-                else if (vote_rule == 2)
-                {
-                    final_result_percent = Reinforced_Qualified_Majority_percent;
-                }
-                else if (vote_rule == 3)
-                {
-                    final_result_percent = Simple_Majority_percent;
-                }
-                else
-                {
-                    final_result_percent = Unanimity_percent;
-                }
-            }
-            else
-            {
-                double Qualified_Majority_percent = 65.0;
-                double Reinforced_Qualified_Majority_percent = 65.0;
-                double Simple_Majority_percent = 0.0;
-                double Unanimity_percent = 0.0;
-
-                if (vote_rule == 1)
-                {
-                    final_result_percent = Qualified_Majority_percent;
-                }
-                else if (vote_rule == 2)
-                {
-                    final_result_percent = Reinforced_Qualified_Majority_percent;
-                }
-                else if (vote_rule == 3)
-                {
-                    final_result_percent = Simple_Majority_percent;
-                }
-                else
-                {
-                    final_result_percent = Unanimity_percent;
-                }
-            }
-
-            if (participatingRule == 1)
-            {
-                int Qualified_Majority = 15;
-                int Reinforced_Qualified_Majority = 20;
-                int Simple_Majority = 14;
-                int Unanimity = 27;
-
-                if (vote_rule == 1)
-                {
-                    final_result = Qualified_Majority;
-                }
-                else if (vote_rule == 2)
-                {
-                    final_result = Reinforced_Qualified_Majority;
-                }
-                else if (vote_rule == 3)
-                {
-                    final_result = Simple_Majority;
-                }
-                else
-                {
-                    final_result = Unanimity;
-                }
-            }
-            else
-            {
-                int Qualified_Majority = 11;
-                int Reinforced_Qualified_Majority = 14;
-                int Simple_Majority = 10;
-                int Unanimity = 19;
-                if (vote_rule == 1)
-                {
-                    final_result = Qualified_Majority;
-                }
-                else if (vote_rule == 2)
-                {
-                    final_result = Reinforced_Qualified_Majority;
-                }
-                else if (vote_rule == 3)
-                {
-                    final_result = Simple_Majority;
-                }
-                else
-                {
-                    final_result = Unanimity;
-                }
-            }
-
-            if (Yes >= final_result & TotalPercentage >= final_result_percent)
-            {
+            var final_result = (100.0 / (Yes + No + Abstain) * Yes);
+            
+            if (final_result >= Members_State & TotalPercentage >= Population)      //This tests if both total vote and the total population percentage 
+            {                                                                       //meets the requirements of the rules which was set earlier.  
                 Console.WriteLine("Approved!");
             }
             else

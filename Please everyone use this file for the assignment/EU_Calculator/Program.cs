@@ -6,7 +6,8 @@ namespace EU_Calculator
     {
         static void Main(string[] args)
         {
-                        var Country = new Country();
+            //calls Country class and uses the AddCountry function to which it makes a list of objects.
+            var Country = new Country();
 
             Country.AddCountry("Austria", 8822000, true);
             Country.AddCountry("Belgium", 11539000, true);
@@ -37,6 +38,10 @@ namespace EU_Calculator
             Country.AddCountry("Sweden", 10036000, false);
 
             Voting_Rules.Rules(out double Members_State, out double Population);
+            
+            Country.RemoveCountry();
+
+            Console.WriteLine(Country.GetCountry(Members_State, Population));
         }
     }
 }

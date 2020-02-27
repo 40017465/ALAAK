@@ -21,8 +21,10 @@ namespace EU_Calculator
 
     public class Country
     {
-        private List<Country_List> Countries = new List<Country_List>();
-
+        private List<Country_List> Countries = new List<Country_List>();        
+        
+        //This works by looping the countries list and selecting that country's population 
+        //which then is added to the totalpopulation once the loop end totalpopulation is returned.
         public int TotalPopulation
         {
             get
@@ -35,7 +37,8 @@ namespace EU_Calculator
                 return totalpopulation;
             }
         }
-
+        //This works by being given the country's population and running the calculation 
+        //which it uses Totalpopulation above to help, once done the percentage is returned.
         public double Percentage(int Population)
         {
             double percentage = 0;
@@ -44,9 +47,9 @@ namespace EU_Calculator
             return percentage;
         }
 
-        //prints each country and calls the voting function in the results class after all countries have been passed, calls results function
+        //Prints each country and calls the voting function in the results class after all countries have been passed, calls results function
         //passes on both rules to the results class
-        public string GetCountry(int participatingRule, int vote_rule)
+        public string GetCountry(double Members_State, double Population)
         {
             Results vote = new Results();
 
@@ -57,9 +60,9 @@ namespace EU_Calculator
             {
                 total += country.Population;
                 Console.WriteLine(country.Name);
-                vote.Votes(Percentage(country.Population));
+                vote.Votes(Percentage(country.Population));         //calls votes function aswell as passing the percentage of the current country.
             }
-            vote.results(participatingRule, vote_rule);
+            vote.results(Members_State, Population);                //Runs results function after loop is done.
             return GetCountries.ToString();
         }
 
