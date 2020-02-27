@@ -62,5 +62,20 @@ namespace EU_Calculator
 
             }
         }
+
     }
+    public static int EuroZone()
+        {
+            Console.WriteLine("Would you like to incluce non Euro Zone? 1:Yes 2:No");
+            int Answer = int.Parse(Console.ReadLine());
+            if (Asnwer == 1)
+            {
+                Country.GetCountry();
+            }
+
+            else 
+            {
+                Country.RemoveCountry();            
+            }              
+        }
 }
