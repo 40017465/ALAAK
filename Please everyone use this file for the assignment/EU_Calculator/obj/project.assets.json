@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\": {}
+    "C:\\Users\\40017235\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
       "projectName": "EU_Calculator",
-      "projectPath": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
-      "packagesPath": "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
+      "projectPath": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+      "packagesPath": "C:\\Users\\40017235\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\alexl_2ewksan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\40017235\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -44,21 +48,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
