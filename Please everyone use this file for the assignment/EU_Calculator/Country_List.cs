@@ -5,7 +5,8 @@ using System.Text;
 namespace EU_Calculator
 {
     public class Country_List
-    {
+    {   
+        //pulling country information and changing names
         public string Name { get; }
         public int Population { get; }
         public bool EUZoneOnly { get; }
