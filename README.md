@@ -14,7 +14,7 @@ Eurozone check
 Rules (Return percentage variable)
 
 
-Results (Kieran, Adam)
+Results (Adam)
 Functions:
 Yes/No
 Eurozone check
