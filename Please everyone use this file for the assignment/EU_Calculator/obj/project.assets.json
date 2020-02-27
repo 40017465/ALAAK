@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\40017235\\.nuget\\packages\\": {},
+    "C:\\Users\\40017465\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\40017465\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
       "projectName": "EU_Calculator",
-      "projectPath": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
-      "packagesPath": "C:\\Users\\40017235\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\40017235\\Source\\Repos\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
+      "projectPath": "C:\\Users\\40017465\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+      "packagesPath": "C:\\Users\\40017465\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\40017465\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\40017235\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\40017465\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
