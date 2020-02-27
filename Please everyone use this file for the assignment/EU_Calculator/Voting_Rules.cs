@@ -23,24 +23,24 @@ namespace EU_Calculator
                         {
                             if (Answer == 1)
                             {
-                                Members_State = 55 * 0.1;
-                                Population = 65 * 0.1;
+                                Members_State = 55.0 ;
+                                Population = 65.0;
                             }
                             else if (Answer == 2)
                             {
-                                Members_State = 72 * 0.1;
-                                Population = 65 * 0.1;
+                                Members_State = 72.0;
+                                Population = 65.0;
 
                             }
                             else if (Answer == 3)
                             {
-                                Members_State = 50 * 0.1;
-                                Population = 0;
+                                Members_State = 50.0;
+                                Population = 0.0;
                             }
                             else
                             {
-                                Members_State = 27 * 0.1;
-                                Population = 0;
+                                Members_State = 27.0;
+                                Population = 0.0;
                             }
 
 
