@@ -21,46 +21,41 @@ namespace EU_Calculator
         {
             Console.WriteLine("Vote" + "\n" + "1. Yes" + "\n" + "2. No" + "\n" + "3. Abstain");
 
-            bool flag = false;
+            int userinput = -1;
             do
             {
-                string input = Console.ReadLine();
-                if (!string.IsNullOrEmpty(input))
+                if (!int.TryParse(Console.ReadLine(), out userinput))
                 {
-                    int input_number = Int32.Parse(input);
-
-                    if (input_number >= 1 && input_number <= 3)
-                    {
-                        if (input_number == 1)
-                        {
-                            TotalPercentage += percentage;     //adds the current percentage to over all TotalPercentage. 
-                            Yes++;                             //adds a +1 to the Yes counter.
-                            flag = true;                       //breaks out of the loop.
-                        }
-                        else if (input_number == 2)
-                        {
-                            NoPercentage += percentage;         //adds the current percentage of NoPercentage to over all percentage of NoPercentage. 
-                            No++;                               //adds a +1 to the No counter.
-                            flag = true;
-                        }
-                        else
-                        {
-                            AbstainPercentage += percentage;    //adds the current percentage of AbstainPercentage to over all percentage of AbstainPercentage.
-                            Abstain++;                          //adds a +1 to the Abstain counter.
-                            flag = true;
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Enter 1 2 or 3");
-                    }
+                    Console.WriteLine("Enter 1 or 3");
                 }
                 else
                 {
-                    Console.WriteLine("Enter 1 2 or 3");
+                    if (userinput < 1 || userinput > 3)
+                    {
+                        Console.WriteLine("Enter 1 or 3");
+                    }
                 }
             }
-            while (!flag);
+            while (userinput < 1 || userinput > 3);
+            
+            if (userinput >= 1 && userinput <= 3)
+            {
+                if (userinput == 1)
+                {
+                    TotalPercentage += percentage;     //adds the current percentage to over all TotalPercentage. 
+                    Yes++;                             //adds a +1 to the Yes counter.
+                }
+                else if (userinput == 2)
+                {
+                    NoPercentage += percentage;         //adds the current percentage of NoPercentage to over all percentage of NoPercentage. 
+                    No++;                               //adds a +1 to the No counter.
+                }
+                else
+                {
+                    AbstainPercentage += percentage;    //adds the current percentage of AbstainPercentage to over all percentage of AbstainPercentage.
+                    Abstain++;                          //adds a +1 to the Abstain counter.
+                }
+            }
         }
 
         //Using the rules which it got passed to plus the above data, it will test to see if its Approved or Rejected.

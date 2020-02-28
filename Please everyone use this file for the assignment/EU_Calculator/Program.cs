@@ -37,9 +37,24 @@ namespace EU_Calculator
             Country.AddCountry("Spain", 46736000, true);
             Country.AddCountry("Sweden", 10036000, false);
 
+            //calls voting_rules to set up the rule sets for later.
             Voting_Rules.Rules(out double Members_State, out double Population);
-            
 
+
+            //tested all works just need the do while editing to voting_rules
+            //for the love of me couldnt get the Country.RemoveCountry();
+            //to work in EuroZone maybe it just cant the see the list  
+            //but works from here
+            //will remove this comment once its all working :) 
+
+            //userinput name can be changed to whatever
+            Voting_Rules.EuroZone(out int userinput);
+
+            if (userinput == 2)
+            {
+                Country.RemoveCountry();
+            }
+            
             Console.WriteLine(Country.GetCountry(Members_State, Population));
         }
     }
