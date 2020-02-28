@@ -39,7 +39,6 @@ namespace EU_Calculator
 
             Voting_Rules.Rules(out double Members_State, out double Population);
             
-            Country.RemoveCountry();
 
             Console.WriteLine(Country.GetCountry(Members_State, Population));
         }

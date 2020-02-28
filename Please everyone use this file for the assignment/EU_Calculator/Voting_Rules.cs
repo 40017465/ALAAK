@@ -15,7 +15,6 @@ namespace EU_Calculator
             {
                 try
                 {
-
                     Console.WriteLine("Which set of rules would you like to use?");
                     Console.WriteLine(" 1: Qualified Majority \n 2: Reinforced Qualified Majority \n 3: Simple Majority \n 4: Unaniminty");
                     int Answer = int.Parse(Console.ReadLine());
@@ -44,33 +43,24 @@ namespace EU_Calculator
                                 Members_State = 27.0;
                                 Population = 0.0;
                             }
-
-
-
-
                         }
                         catch (Exception)
                         {
                             Console.WriteLine("Please enter a number less than 4");
                         }
-
                     }
-
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Please only choose between 1 and 4");
                 }
-
             }
         }
-
-
-
 
         //This is the function to let you decide whether or not to include the Euro Zone.
         public static int EuroZone()
         {
+            Country country = new Country();
             while (true)
             {
                 try
@@ -81,35 +71,22 @@ namespace EU_Calculator
                     {
                         try
                         {
-
-                            if (Answer == 1)
+                            if (Answer == 2)
                             {
-                                Country.GetCountry();
-                            }
-
-                            else
-                            {
-                                Country.RemoveCountry();
-                            }
+                                country.RemoveCountry();
+                            }                                                                              
                         }
                         catch (Exception)
                         {
                             Console.WriteLine("Please don't enter more than 2");
                         }
-
                     }
-
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Please only enter 1 or 2");
                 }
-
-
             }
-
-
-
         }
     }
 }
