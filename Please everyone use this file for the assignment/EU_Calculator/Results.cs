@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace EU_Calculator
 {
@@ -26,13 +24,13 @@ namespace EU_Calculator
             {
                 if (!int.TryParse(Console.ReadLine(), out userinput))
                 {
-                    Console.WriteLine("Enter 1 or 3");
+                    Console.WriteLine("Enter 1 2 or 3");
                 }
                 else
                 {
                     if (userinput < 1 || userinput > 3)
                     {
-                        Console.WriteLine("Enter 1 or 3");
+                        Console.WriteLine("Enter 1 2 or 3");
                     }
                 }
             }
@@ -60,8 +58,7 @@ namespace EU_Calculator
 
         //Using the rules which it got passed to plus the above data, it will test to see if its Approved or Rejected.
         public void results(double Members_State, double Population)
-        {
-            
+        {            
             Console.WriteLine();
             Console.WriteLine("The Votes");                                         //This parts prints how many votes for each yes ,no or abstain
             Console.Write("{0,2}" + " Voted for" + " Yes \t", Yes);                 //and prints the percentage of each aswell.
@@ -77,13 +74,22 @@ namespace EU_Calculator
 
             var final_result = (100.0 / (Yes + No + Abstain) * Yes);
             
-            if (final_result >= Members_State & TotalPercentage >= Population)      //This tests if both total vote and the total population percentage 
+            if (final_result >= Members_State && TotalPercentage >= Population)      //This tests if both total vote and the total population percentage 
             {                                                                       //meets the requirements of the rules which was set earlier.  
                 Console.WriteLine("Approved!");
             }
             else
             {
                 Console.WriteLine("Rejected!");
+                Console.WriteLine();
+                if (final_result < Members_State)
+                {
+                    Console.WriteLine("Needed a minimum of " + Members_State + "%" + " vots in yes");
+                }
+                if (TotalPercentage < Population)
+                {
+                    Console.WriteLine("Needed a minimum of " + Population + "%" + " in total Population");
+                }
             }
         }
     }

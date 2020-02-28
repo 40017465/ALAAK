@@ -41,23 +41,23 @@ namespace EU_Calculator
             else if (Answer == 3)
             {
                 Members_State = 50.0;
-                Population = 0.0;
+                Population = 50.0;
             }
 
             else
             {
-                Members_State = 27.0;
-                Population = 0.0;
+                Members_State = 100.0;
+                Population = 100.0;
             }
-
-
-            EuroZone();   
+            
+            //EuroZone();   
         }
+
         //This is the function to let you decide whether or not to include the Euro Zone.
-        public static void EuroZone()
+        public static int EuroZone()
         {
             int Answer = -1;
-            Country country = new Country();
+            //Country country = new Country();
             do
             {
                 Console.WriteLine("Would you like to include non Euro Zone? 1:Yes 2:No");
@@ -67,15 +67,14 @@ namespace EU_Calculator
                 }
             } while (Answer < 0 || Answer > 2);
 
-            if (Answer == 2)
-            {
-                country.RemoveCountry();
-            
-            }
-               
+
+            //Alex if your happy with this remove this comment Adam.
+            return Answer;
+
+           // if (Answer == 2)
+          //  {
+           //     country.RemoveCountry();            
+           // }               
         }
     }
-
 }
-
-

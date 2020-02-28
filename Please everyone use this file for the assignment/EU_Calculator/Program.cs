@@ -4,7 +4,7 @@ namespace EU_Calculator
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //calls Country class and uses the AddCountry function to which it makes a list of objects.
             var Country = new Country();
@@ -40,28 +40,13 @@ namespace EU_Calculator
             //calls voting_rules to set up the rule sets for later.
             Voting_Rules.Rules(out double Members_State, out double Population);
 
+            //calls voting_rules to set up the rule for if all countries are participating or EU zone only.
 
-            //tested all works just need the do while editing to voting_rules
-            //for the love of me couldnt get the Country.RemoveCountry();
-            //to work in EuroZone maybe it just cant the see the list  
-            //but works from here
-            //will remove this comment once its all working :) 
+            //all working 
+            //Alex if your happy with this remove this comment Adam.
+            Country.RemoveCountry(Voting_Rules.EuroZone());
 
-            // Alex: Sorry i did not see these comments before i did the work! Yeah Voting_Rules is all fixed and i commented out your code.
-            // Alex: As you stated though Country.RemoveCountry is not working!
-            // Alex: I will have a play.
-            // Alex: Yeah Country.RemoveCountry is not working at all... 
-            
-            
-            //userinput name can be changed to whatever
-            //Voting_Rules.EuroZone();
-
-            //if (Answer2 == 2)
-            {
-                //Country.RemoveCountry();
-            }
-            
-            Console.WriteLine(Country.GetCountry(Members_State, Population));
+            Country.GetCountry(Members_State, Population);
         }
     }
 }

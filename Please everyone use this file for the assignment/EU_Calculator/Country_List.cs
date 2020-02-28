@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace EU_Calculator
 {
@@ -49,21 +48,16 @@ namespace EU_Calculator
 
         //Prints each country and calls the voting function in the results class after all countries have been passed, calls results function
         //passes on both rules to the results class
-        public string GetCountry(double Members_State, double Population)
+        public void GetCountry(double Members_State, double Population)
         {
             Results vote = new Results();
 
-            var GetCountries = new System.Text.StringBuilder();
-
-            decimal total = 0;
             foreach (var country in Countries)
             {
-                total += country.Population;
                 Console.WriteLine(country.Name);
                 vote.Votes(Percentage(country.Population));         //calls votes function aswell as passing the percentage of the current country.
             }
             vote.results(Members_State, Population);                //Runs results function after loop is done.
-            return GetCountries.ToString();
         }
 
         //adds each country to the list
@@ -74,9 +68,12 @@ namespace EU_Calculator
         }
 
         //removes countries not in EUZone
-        public void RemoveCountry()
+        public void RemoveCountry(int Answer)
         {
-            Countries.RemoveAll(remove => remove.EUZoneOnly == false);
+            if (Answer == 2)
+            {
+                Countries.RemoveAll(remove => remove.EUZoneOnly == false);
+            }
         }
     }
 }
