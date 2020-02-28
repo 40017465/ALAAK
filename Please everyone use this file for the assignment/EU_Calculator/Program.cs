@@ -48,11 +48,11 @@ namespace EU_Calculator
             //will remove this comment once its all working :) 
 
             //userinput name can be changed to whatever
-            Voting_Rules.EuroZone(out int userinput);
+            //Voting_Rules.EuroZone(out int userinput);
 
-            if (userinput == 2)
+            //if (Anwser == 2)
             {
-                Country.RemoveCountry();
+                //Country.RemoveCountry();
             }
             
             Console.WriteLine(Country.GetCountry(Members_State, Population));

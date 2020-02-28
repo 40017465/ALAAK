@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Laptop-Home-W10\\.nuget\\packages\\": {}
+    "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Laptop-Home-W10\\Source\\Repos\\40017465\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
       "projectName": "EU_Calculator",
-      "projectPath": "C:\\Users\\Laptop-Home-W10\\Source\\Repos\\40017465\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
-      "packagesPath": "C:\\Users\\Laptop-Home-W10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Laptop-Home-W10\\Source\\Repos\\40017465\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
+      "projectPath": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\EU_Calculator.csproj",
+      "packagesPath": "C:\\Users\\alexl_2ewksan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexl_2ewksan\\Desktop\\ALAAK\\Please everyone use this file for the assignment\\EU_Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Laptop-Home-W10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexl_2ewksan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
