@@ -47,6 +47,9 @@ namespace EU_Calculator
             //but works from here
             //will remove this comment once its all working :) 
 
+            // Alex: Sorry i did not see these comments before i did the work! Yeah Voting_Rules is all fixed and i commented out your code.
+            // Alex: As you stated though Country.RemoveCountry is not working!
+            // Alex: I will have a play.
             //userinput name can be changed to whatever
             //Voting_Rules.EuroZone(out int userinput);
 
