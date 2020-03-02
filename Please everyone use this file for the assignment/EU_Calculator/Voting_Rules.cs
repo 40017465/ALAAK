@@ -15,9 +15,13 @@ namespace EU_Calculator
             {
                 Console.WriteLine("Which set of rules would you like to use?");
                 Console.WriteLine(" 1: Qualified Majority \n 2: Reinforced Qualified Majority \n 3: Simple Majority \n 4: Unaniminty");
-                if (!int.TryParse(Console.ReadLine(), out Answer))
+                if (int.TryParse(Console.ReadLine(), out Answer))
                 {
-                    Console.WriteLine("Please only enter 1 to 4");
+                    Console.WriteLine("\nPlease only enter 1 to 4\n");
+                }
+                else
+                {
+                    Console.WriteLine("\nPlease only enter the numbers 1 to 4\n");
                 }
             }
             while (Answer < 1 || Answer > 4);
@@ -57,17 +61,21 @@ namespace EU_Calculator
             do
             {
                 Console.WriteLine("Would you like to include non Euro Zone countries?\n 1: Yes\n 2: No");
-                if (!int.TryParse(Console.ReadLine(), out Answer))
+                if (int.TryParse(Console.ReadLine(), out Answer))
                 {
-                    Console.WriteLine("Please only enter 1 or 2");
+                    Console.WriteLine("\nPlease only enter 1 or 2\n");
                     
+                }
+                else
+                {
+                    Console.WriteLine("\nPlease only enter the numbers 1 or 2\n");
+                    Answer = -1;
                 }
                 
             } 
             while (Answer < 0 || Answer > 2);
-            
             return Answer;
-           
         }
+            
     }
 }
