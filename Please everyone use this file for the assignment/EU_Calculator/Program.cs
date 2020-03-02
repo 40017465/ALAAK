@@ -4,7 +4,7 @@ namespace EU_Calculator
 {
     class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             //calls Country class and uses the AddCountry function to which it makes a list of objects.
             var Country = new Country();
@@ -41,9 +41,6 @@ namespace EU_Calculator
             Voting_Rules.Rules(out double Members_State, out double Population);
 
             //calls voting_rules to set up the rule for if all countries are participating or EU zone only.
-
-            //all working 
-            //Alex if your happy with this remove this comment Adam.
             Country.RemoveCountry(Voting_Rules.EuroZone());
 
             Country.GetCountry(Members_State, Population);
