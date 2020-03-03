@@ -4,17 +4,19 @@ using System.Collections.Generic;
 namespace EU_Calculator
 {
     public class Country_List
-    {   
-        //pulling country information and changing names
-        public string Name { get; }
-        public int Population { get; }
-        public bool EUZoneOnly { get; }
+    {
+        //This constructor which allows us to set the values for each field.
+        //We pass a parameter to the constructor to which it will set the value of.
+        public string Name { get; }         //sets Name as a string
+        public int Population { get; }      //sets Population as a integer
+        public bool EUZoneOnly { get; }     //sets EUZoneOnly as a boolean
 
+        //passes the country information from the list which then the constructor aboves uses.
         public Country_List(string name, int population, bool euZoneOnly)
         {
-            this.Name = name;
-            this.Population = population;
-            this.EUZoneOnly = euZoneOnly;
+            this.Name = name;                   //Name becomes name, in this case the name of country which is being used
+            this.Population = population;       //same for the other two
+            this.EUZoneOnly = euZoneOnly;       
         }
     }
 
@@ -60,14 +62,14 @@ namespace EU_Calculator
             vote.results(Members_State, Population);                //Runs results function after loop is done.
         }
 
-        //adds each country to the list
-        public void AddCountry(string name, int amount, bool euZoneOnly)
+        //adds each country to the list along with population and euZoneOnly values
+        public void AddCountry(string name, int population, bool euZoneOnly)
         {
-            var addCountry = new Country_List(name, amount, euZoneOnly);
+            var addCountry = new Country_List(name, population, euZoneOnly);
             Countries.Add(addCountry);
         }
 
-        //removes countries not in EUZone
+        //removes each country which is set to false (not in the EU Zone)
         public void RemoveCountry(int Answer)
         {
             if (Answer == 2)

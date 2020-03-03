@@ -10,11 +10,11 @@ namespace EU_Calculator
         public int Abstain { get; set; }
         public int final_result { get; set; }
         public double final_result_percent { get; set; }
-        public double TotalPercentage { get; set; }
-        public double NoPercentage { get; set; }
-        public double AbstainPercentage { get; set; }
+        public double Yes_Percentage { get; set; }
+        public double No_Percentage { get; set; }
+        public double Abstain_Percentage { get; set; }
 
-        //After the country is shown the user is then asked for an input and that input is stored aswell as the percentage which will be used later in results.  
+        //After the country is shown to the user is then asked for an input and that input and percentage is stored which will be used later in results.  
         public void Votes(double percentage)
         {
             Console.WriteLine("Vote" + "\n" + "1. Yes" + "\n" + "2. No" + "\n" + "3. Abstain");
@@ -35,46 +35,45 @@ namespace EU_Calculator
                 }
             }
             while (userinput < 1 || userinput > 3);
-            
-            if (userinput >= 1 && userinput <= 3)
+
+
+            if (userinput == 1)
             {
-                if (userinput == 1)
-                {
-                    TotalPercentage += percentage;     //adds the current percentage to over all TotalPercentage. 
-                    Yes++;                             //adds a +1 to the Yes counter.
-                }
-                else if (userinput == 2)
-                {
-                    NoPercentage += percentage;         //adds the current percentage of NoPercentage to over all percentage of NoPercentage. 
-                    No++;                               //adds a +1 to the No counter.
-                }
-                else
-                {
-                    AbstainPercentage += percentage;    //adds the current percentage of AbstainPercentage to over all percentage of AbstainPercentage.
-                    Abstain++;                          //adds a +1 to the Abstain counter.
-                }
+                Yes_Percentage += percentage;     //adds the current percentage to over all Yes_Percentage. 
+                Yes++;                             //adds a +1 to the Yes counter.
+            }
+            else if (userinput == 2)
+            {
+                No_Percentage += percentage;         //adds the current percentage of NoPercentage to over all percentage of No_Percentage. 
+                No++;                               //adds a +1 to the No counter.
+            }
+            else
+            {
+                Abstain_Percentage += percentage;    //adds the current percentage of AbstainPercentage to over all percentage of Abstain_Percentage.
+                Abstain++;                          //adds a +1 to the Abstain counter.
             }
         }
+        
 
-        //Using the rules which it got passed to plus the above data, it will test to see if its Approved or Rejected.
+        //Using the rules which it got passed to plus the data from earlier, it will test to see if its Approved or Rejected.
         public void results(double Members_State, double Population)
         {            
             Console.WriteLine();
             Console.WriteLine("The Votes");                                         //This parts prints how many votes for each yes ,no or abstain
-            Console.Write("{0,2}" + " Voted for" + " Yes \t", Yes);                 //and prints the percentage of each aswell.
-            Console.WriteLine("{0:f2}%" + " voted Yes", TotalPercentage);
+            Console.Write("{0,2}" + " Voted for" + " Yes \t", Yes);                 //and prints the population percentage of each aswell.
+            Console.WriteLine("{0:f2}%" + " in population voted Yes", Yes_Percentage);
 
             Console.Write("{0,2}" + " Voted for" + " No \t", No);
-            Console.WriteLine("{0:f2}%" + " voted no", NoPercentage);
+            Console.WriteLine("{0:f2}%" + " in population voted no", No_Percentage);
 
             Console.Write("{0,2}" + " Voted for" + " Abstain \t", Abstain);
-            Console.WriteLine("{0:f2}%" + " voted Abstain ", AbstainPercentage);
+            Console.WriteLine("{0:f2}%" + " in population voted Abstain ", Abstain_Percentage);
 
             Console.WriteLine();
 
             var final_result = (100.0 / (Yes + No + Abstain) * Yes);
             
-            if (final_result >= Members_State && TotalPercentage >= Population)      //This tests if both total vote and the total population percentage 
+            if (final_result >= Members_State && Yes_Percentage >= Population)      //This tests if both total Yes vote and the total Yes_Percentage(population) 
             {                                                                       //meets the requirements of the rules which was set earlier.  
                 Console.WriteLine("Approved!");
             }
@@ -82,13 +81,14 @@ namespace EU_Calculator
             {
                 Console.WriteLine("Rejected!");
                 Console.WriteLine();
-                if (final_result < Members_State)
-                {
+
+                if (final_result < Members_State)                                                       //Prints the requirements if rejected
+                {                                                                                       //prints out the one which failed or both. 
                     Console.WriteLine("Needed a minimum of " + Members_State + "%" + " vots in yes");
                 }
-                if (TotalPercentage < Population)
+                if (Yes_Percentage < Population)
                 {
-                    Console.WriteLine("Needed a minimum of " + Population + "%" + " in total Population");
+                    Console.WriteLine("Needed a minimum of " + Population + "%" + " in population to vote yes");
                 }
             }
         }
