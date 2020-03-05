@@ -9,23 +9,26 @@ namespace EU_Calculator
         //This is the function which lets you set the rules.
         public static void Rules(out double Members_State, out double Population)
         {
-
+                                 
             int Answer = -1;
             do
             {
                 Console.WriteLine("Which set of rules would you like to use?");
                 Console.WriteLine(" 1: Qualified Majority \n 2: Reinforced Qualified Majority \n 3: Simple Majority \n 4: Unaniminty");
-                if (int.TryParse(Console.ReadLine(), out Answer))
-                {
-                    Console.WriteLine("\nPlease only enter 1 to 4\n");
-                }
-                else
+                if (!int.TryParse(Console.ReadLine(), out Answer))
                 {
                     Console.WriteLine("\nPlease only enter the numbers 1 to 4\n");
                 }
+                else
+                {
+                    if (Answer < 1 || Answer > 4)
+                    {
+                        Console.WriteLine("\nPlease only enter 1 to 4\n");
+                    }
+                }
             }
             while (Answer < 1 || Answer > 4);
-
+                                                  
             if (Answer == 1)
             {
                 Members_State = 55.0;
@@ -56,24 +59,24 @@ namespace EU_Calculator
 
         //This is the function to let you decide whether or not to include the Euro Zone.
         public static int EuroZone()
-        {
+        {          
             int Answer = -1;
             do
             {
                 Console.WriteLine("Would you like to include non Euro Zone countries?\n 1: Yes\n 2: No");
-                if (int.TryParse(Console.ReadLine(), out Answer))
+                if (!int.TryParse(Console.ReadLine(), out Answer))
                 {
                     Console.WriteLine("\nPlease only enter 1 or 2\n");
-                    
                 }
                 else
                 {
-                    Console.WriteLine("\nPlease only enter the numbers 1 or 2\n");
-                    Answer = -1;
+                    if (Answer < 1 || Answer > 2)
+                    {
+                        Console.WriteLine("\nPlease only enter the numbers 1 or 2\n");
+                    }
                 }
-                
-            } 
-            while (Answer < 0 || Answer > 2);
+            }
+            while (Answer < 1 || Answer > 2);
             return Answer;
         }
             
